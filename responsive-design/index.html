@@ -1,60 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Landing Page</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('hero-bg.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff6f61;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #e55d50;
+    }
+
+    /* Features Section */
+    .features {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature-item {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .feature-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-info {
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+
+    .social-links a {
+      color: #ff6f61;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
 <body>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Our Amazing Product</h1>
-            <p>Your ultimate solution for all your needs. Streamline your workflow and achieve more.</p>
-            <a href="#" class="cta-btn">Sign Up Now</a>
-        </div>
-    </header>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our Amazing Product</h1>
+      <p>Your ultimate solution for all your needs. Streamline your workflow and achieve more.</p>
+      <a href="#" class="cta-btn">Sign Up Now</a>
+    </div>
+  </header>
 
-    <!-- Features Section -->
-    <section class="features">
-        <h2>Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-item">
-                <img src="icon1.png" alt="Feature Icon 1">
-                <h3>Feature One</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="feature-item">
-                <img src="icon2.png" alt="Feature Icon 2">
-                <h3>Feature Two</h3>
-                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="feature-item">
-                <img src="icon3.png" alt="Feature Icon 3">
-                <h3>Feature Three</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <img src="icon1.png" alt="Feature Icon 1">
+        <h3>Feature One</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="feature-item">
+        <img src="icon2.png" alt="Feature Icon 2">
+        <h3>Feature Two</h3>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="feature-item">
+        <img src="icon3.png" alt="Feature Icon 3">
+        <h3>Feature Three</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="contact-info">
-            <p>Email: contact@example.com</p>
-            <p>Phone: +1 (123) 456-7890</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
-        </div>
-        <p class="copyright">&copy; 2023 Your Company. All rights reserved.</p>
-    </footer>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="contact-info">
+      <p>Email: contact@example.com</p>
+      <p>Phone: +1 (123) 456-7890</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2023 Your Company. All rights reserved.</p>
+  </footer>
 
 </body>
-
 </html>
